@@ -8,15 +8,20 @@ import mongoose from 'mongoose';
 const app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-app.use(cors());
-app.listen(process.env.PORT || 8080);
+app.use(cors())
+app.listen(process.env.PORT || 8081);
 
 // Mongoose configuration
-import mongoose, { Query } from 'mongoose';
-mongoose.connect(`mongodb://localhost/users`);
-mongoose.Promise = global.Promise;
+//import mongoose, { Query } from 'mongoose';
+//mongoose.connect(`mongodb://localhost/users`);
+//mongoose.Promise = global.Promise;
 
-// Test handler 
+app.get('/', (req, res) => {
+  res.send(
+    
+  )
+});
+
 app.get('/test', (req, res) => {
   res.send(
     [{
